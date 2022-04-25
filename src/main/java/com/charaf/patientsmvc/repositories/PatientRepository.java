@@ -9,4 +9,6 @@ import org.springframework.data.jpa.repository.support.JpaRepositoryImplementati
 
 public interface PatientRepository extends JpaRepositoryImplementation<Patient,Long> {
     Page<Patient> findByNomContains(String kw, Pageable pageable);
+    Page<Patient> findByScoreContains(int kw, Pageable pageable);
+    Page<Patient> findByIdContains(String kw, Pageable pageable);
 }

@@ -29,6 +29,7 @@ public class PatientController {
                            @RequestParam(name = "keyword",defaultValue = "")String keyword
     ){
         Page<Patient> pagePatients = patientRepository.findByNomContains(keyword,PageRequest.of(page,size));
+        //Page<Patient> pagePatients = patientRepository.findByScoreContains(Integer.parseInt(keyword),PageRequest.of(page,size));
         model.addAttribute("listPatients",pagePatients.getContent());
         model.addAttribute("pages",new int[pagePatients.getTotalPages()] );
         model.addAttribute("currentPage",page);
