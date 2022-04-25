@@ -16,8 +16,8 @@
 
 <br />
 <div align="center">
-  <a href="https://atomrace.com/blog/wp-content/uploads/2018/05/spring-boot-logo.png">
-    <img src="images/logo.png" alt="Logo" width="80" height="80">
+  <a href="https://github.com/Charafeddine26/MVC-PATIENT-CHARAF">
+    <img src="https://atomrace.com/blog/wp-content/uploads/2018/05/spring-boot-logo.png" alt="Logo" width="150" height="80">
   </a>
 
 <h3 align="center">Patients-MVC</h3>
@@ -25,14 +25,11 @@
   <p align="center">
     project_description
     <br />
-    <a href="https://github.com/github_username/repo_name"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/Charafeddine26/MVC-PATIENT-CHARAF"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/github_username/repo_name">View Demo</a>
-    ·
-    <a href="https://github.com/github_username/repo_name/issues">Report Bug</a>
-    ·
-    <a href="https://github.com/github_username/repo_name/issues">Request Feature</a>
+    <a href="https://github.com/Charafeddine26/MVC-PATIENT-CHARAF">View Demo</a>
+   
   </p>
 </div>
 
@@ -71,7 +68,7 @@
 
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
-Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `github_username`, `repo_name`, `twitter_handle`, `linkedin_username`, `email_client`, `email`, `project_title`, `project_description`
+Here's a blank template to get started: To avoid retyping too much info. Do a search and replace with your text editor for the following: `github_username`, `repo_name`, `twitter_handle`, `linkedin_username`, `email_client`, `email`, `Patients-MVC`, `project_description`
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -79,14 +76,12 @@ Here's a blank template to get started: To avoid retyping too much info. Do a se
 
 ### Built With
 
-* [Next.js](https://nextjs.org/)
-* [React.js](https://reactjs.org/)
-* [Vue.js](https://vuejs.org/)
-* [Angular](https://angular.io/)
-* [Svelte](https://svelte.dev/)
-* [Laravel](https://laravel.com)
-* [Bootstrap](https://getbootstrap.com)
-* [JQuery](https://jquery.com)
+* [Java](https://www.oracle.com/java/technologies/)
+* [Spring boot](https://spring.io/projects/spring-boot)
+* [Thymeleaf](https://www.thymeleaf.org/)
+* [HTML](https://en.wikipedia.org/wiki/HTML)
+* [MySQL](https://www.mysql.com/)
+
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
@@ -95,29 +90,36 @@ Here's a blank template to get started: To avoid retyping too much info. Do a se
 <!-- GETTING STARTED -->
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+Avant d'initier, ce projet avez pour but : nous introduire (a) Spring boot qui est un framework en Java, il permet 
+de développer plus rapidement en se focalisant essentiellement sur le code métier.
 
-### Prerequisites
+### Prérequis
 
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-  ```sh
-  npm install npm@latest -g
-  ```
+Pour les prérequis, il est recommendé d'utiliser `Intellij Idea`, pour profiter de l'automatisation et suggestions du code,
+et l'accessibilité des plugins différents.
 
-### Installation
+`MariaDB`, qui repose sur MySQL, comme un système de gestion de base de données relationnelle (SGBDR) open source.
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
+`Thymeleaf` est un template moteur (moteur de rendu de document) écrit en Java. Principalement conçu pour produire des vues Web,
+il fournit un support pour la génération de documents HTML
+
+
+### Creation du projet
+
+1. Installation de l'environnement Intellij Idea.
+2. Creation du projet en respectant premièrement le type du projet étant : Spring Initializor.
+
+ ![img.png](img.png)
+3. Ajout des dépendances nécessaires : 
+![img_2.png](img_2.png)
    ```sh
    git clone https://github.com/github_username/repo_name.git
    ```
-3. Install NPM packages
+4. Install NPM packages
    ```sh
    npm install
    ```
-4. Enter your API in `config.js`
+5. Enter your API in `config.js`
    ```js
    const API_KEY = 'ENTER YOUR API';
    ```
