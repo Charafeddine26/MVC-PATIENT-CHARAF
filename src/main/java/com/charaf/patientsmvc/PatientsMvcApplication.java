@@ -37,7 +37,7 @@ public class PatientsMvcApplication {
             });
         };
     }*/
-    @Bean
+    //@Bean
     CommandLineRunner commandLineRunner(MedecinRepository medecinRepository){
         return args -> {
             medecinRepository.save(new Medecin(null,"Medecin1",new Date(),false,31312312));
