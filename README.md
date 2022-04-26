@@ -110,44 +110,86 @@ il fournit un support pour la génération de documents HTML
 2. Creation du projet en respectant premièrement le type du projet étant : Spring Initializor.
 
  ![img.png](img.png)
-3. Ajout des dépendances nécessaires : 
+3. Ajout des dépendances nécessaires :
+
+
 ![img_2.png](img_2.png)
-   ```sh
-   git clone https://github.com/github_username/repo_name.git
-   ```
-4. Install NPM packages
-   ```sh
-   npm install
-   ```
-5. Enter your API in `config.js`
-   ```js
-   const API_KEY = 'ENTER YOUR API';
-   ```
+   
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
 
-<!-- USAGE EXAMPLES -->
-## Usage
+## Developpement de l'application MVC
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+### M :
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+Comme son nom le dénonce, l'application MVC doit commencer par le modèle ou entity : Patient.
+
+Cette dernière contient les attributs principaux d'une classe patient.
+Avec implementation de `@Data` pour les getters et setters, `@AllArgsConstructor` et `@NoArgsConstructor` pour 
+les constructeurs. `@Id` pour la clef primaire, et `@Entity` pour la declarer en tant qu'entité.
+
+![img_3.png](img_3.png)
+
+### V :
+
+Ensuite la creation des vues, où nous avons créé une page template qui contient les éléments utilisés à chaque fois
+comme la Navbar. 
+
+```sh
+layout:decorate="template1"
+```
+
+Cette template.html est incluse dans notre premiere vue principale : patients.html, qui s'en occupe pour afficher 
+un tableau de patients avec leur information plus un champ de recherche par nom du patient.
+
+![img_4.png](img_4.png)
+
+Et dernièrement, on a créé deux pages l'une pour ajouter un patient et l'autre qui sert à le modifier : editPatient.html et 
+formPatient.html
+
+ ### C :
+
+Finalement, les contrôleurs, ces derniers sont l'intermédiaire entre le modèle et la vue. Le contrôleur va demander au
+modèle les données, les analyser, prendre des décisions et renvoyer le texte à afficher à la vue.
+
+PatientController contient les méthodes : renvoyer la liste des patients, suppression, ajout, modification.
+Ces méthodes se font par des modules prêts offerts par la repository JPA, exemple :
+
+```sh
+patientRepository.deleteById(id);
+```
+
+La méthode `deleteById` est incluse sur la repository CrudRepository qui fait par de la JPA.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
 
-<!-- ROADMAP -->
-## Roadmap
 
-- [ ] Feature 1
-- [ ] Feature 2
-- [ ] Feature 3
-    - [ ] Nested Feature
+## Sécurité
 
-See the [open issues](https://github.com/github_username/repo_name/issues) for a full list of proposed features (and known issues).
+Pour la partie sécurité ; on commence par implementer la dependence : `org.springframework.boot:spring-boot-starter-security`
+
+La classe WebSecurityConfig est annotée avec `@EnableWebSecurity` pour activer le support de la sécurité web de Spring Security et fournir l'intégration Spring MVC.
+
+Les services de sécurité reçoivent l'annotation
+`@Configuration ` Spring demarre ces classes en premier.
+
+Supposons que nous voulions empêcher les utilisateurs non autorisés de voir la page de modification `/editPatient` :
+```sh
+ http.authorizeRequests().antMatchers("/admin/**").hasAuthority("ADMIN"); 
+ ```
+Juste les users ayant le role "ADMIN" auront accès à ces pages.
+Ce role est associé à l'utilisateur sur la classe user_roles.
+
+Revenons à nos vues, quelques elements (Bouton edition et suppression, drop down ajout...), sont cachés à l'aide
+du système d'autorisation ou authority :
+
+```sh
+<th sec:authorize="hasAuthority('ADMIN')">
+```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 

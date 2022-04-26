@@ -26,6 +26,4 @@ public class Patient {
     private boolean malade;
     @DecimalMin("100")
     private int score;
-
-
 }
