@@ -33,20 +33,17 @@
   <summary>Table of Contents</summary>
   <ol>
     <li>
-      <a href="#about-the-project">About The Project</a>
-      <ul>
-        <li><a href="#built-with">Built With</a></li>
-      </ul>
-    </li>
+<a href="#built-with">Built With</a>
+</li>
     <li>
       <a href="#getting-started">Getting Started</a>
       <ul>
         <li><a href="#Prérequis">Prerequisites</a></li>
 </ul>
-</li>
 
-<li><a href="#Creation du projet">Creation du projet</a></li>
-<li><a href="#Developpement de l'application MVC">Developpement de l'application MVC</a></li>
+
+<li><a href="#creation-du-projet">Creation du projet</a></li>
+<li><a href="#developpement-de-l'application-MVC">Developpement de l'application MVC</a></li>
 <ul>
         <li><a href="#M">M </a></li>
         <li><a href="#V">V</a></li>
