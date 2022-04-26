@@ -45,17 +45,18 @@
         <li><a href="#Creation du projet">Creation du projet</a></li>
       </ul>
     </li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Developpement de l'application MVC</a></li>
+
+    <li><a href="#Developpement de l'application MVC">Developpement de l'application MVC</a></li>
 <ul>
-        <li><a href="#M :">M </a></li>
-        <li><a href="#built-with">V</a></li>
-        <li><a href="#built-with">C</a></li>
+        <li><a href="#M">M </a></li>
+        <li><a href="#V">V</a></li>
+        <li><a href="#C">C</a></li>
       </ul>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
+    <li><a href="#Sécurité">Sécurité</a></li>
+    <li><a href="#Contributing">Contributing</a></li>
+    <li><a href="#License">License</a></li>
+    <li><a href="#Contact">Contact</a></li>
+    <li><a href="#References">References</a></li>
   </ol>
 </details>
 
@@ -113,7 +114,7 @@ il fournit un support pour la génération de documents HTML
 
 ## Developpement de l'application MVC
 
-### M :
+### M
 
 Comme son nom le dénonce, l'application MVC doit commencer par le modèle ou entity : Patient.
 
@@ -123,7 +124,7 @@ les constructeurs. `@Id` pour la clef primaire, et `@Entity` pour la declarer en
 
 ![img_3.png](img_3.png)
 
-### V :
+### V
 
 Ensuite la creation des vues, où nous avons créé une page template qui contient les éléments utilisés à chaque fois
 comme la Navbar. 
@@ -140,7 +141,7 @@ un tableau de patients avec leur information plus un champ de recherche par nom 
 Et dernièrement, on a créé deux pages l'une pour ajouter un patient et l'autre qui sert à le modifier : editPatient.html et 
 formPatient.html
 
- ### C :
+ ### C
 
 Finalement, les contrôleurs, ces derniers sont l'intermédiaire entre le modèle et la vue. Le contrôleur va demander au
 modèle les données, les analyser, prendre des décisions et renvoyer le texte à afficher à la vue.
