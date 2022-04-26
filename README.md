@@ -16,7 +16,6 @@
 <h3 align="center">Patients-MVC</h3>
 
   <p align="center">
-    project_description
     <br />
     <a href="https://github.com/Charafeddine26/MVC-PATIENT-CHARAF"><strong>Explore the docs »</strong></a>
     <br />
@@ -196,6 +195,21 @@ Vue avec **user authority**
 
 ![img_7.png](img_7.png)
 
+
+Et finalement, on a ajouté une possibilité de se rappeler de l'utilisateur dernièrement connecté  en ajoutant 
+
+```sh
+ http.authorizeRequests().and().rememberMe().key("uniqueAndSecret"); 
+ ```
+
+La clé est importante ici - il s'agit d'une valeur privée secrète pour l'ensemble de l'application et elle sera utilisée pour générer le contenu du jeton.
+
+En outre, la durée de validité du jeton peut être configurée, passant de la valeur par défaut 
+de 2 semaines à - par exemple - un jour en utilisant tokenValiditySeconds():
+
+```sh
+rememberMe().key("uniqueAndSecret").tokenValiditySeconds(86400)
+ ```
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
